@@ -12,7 +12,7 @@ const Home = () => {
 
     const fetchTask = async (userId) => {
         console.log(userId);
-        const url = "http://localhost:4000/api/task/get-task";
+        const url = "/api/task/get-task";
         await axios
             .post(url, { userId }, { withCredentials: true })
             .then((response) => {
@@ -26,7 +26,7 @@ const Home = () => {
     };
 
     const handleClick = async () => {
-        const url = "http://localhost:4000/api/task/add-task";
+        const url = "/api/task/add-task";
         const userId = currentUser._id;
         console.log(newTask);
         await axios
@@ -56,7 +56,7 @@ const Home = () => {
     const handleDelete = async (taskId) => {
         const userId = currentUser._id;
         console.log(taskId);
-        const url = `http://localhost:4000/api/task/delete/${taskId}`;
+        const url = `/api/task/delete/${taskId}`;
         console.log(url);
         await axios
             .delete(url, { withCredentials: true })

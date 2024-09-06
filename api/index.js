@@ -13,7 +13,7 @@ dotenv.config();
 const __dirname = path.resolve();
 
 app.use(cors({
-    origin: 'https://todo-list-fullstack-xxoz.onrender.com',  // allow requests from this origin
+    origin:  'https://todo-list-fullstack-xxoz.onrender.com' ,  // allow requests from this origin 'https://todo-list-fullstack-xxoz.onrender.com' || 'http://localhost:5173'
     credentials: true,  // allow sending cookies with requests
 }));
 

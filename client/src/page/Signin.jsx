@@ -31,8 +31,8 @@ const Signin = () => {
             ? { name, email, password }
             : { email, password };
         const url = isSignup
-            ? "http://localhost:4000/api/auth/sign-up"
-            : "http://localhost:4000/api/auth/sign-in";
+            ? "/api/auth/sign-up"
+            : "/api/auth/sign-in";
 
         axios
             .post(url, formData, { withCredentials: true })

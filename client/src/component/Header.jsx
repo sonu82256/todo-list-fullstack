@@ -11,7 +11,7 @@ const Header = () => {
 
   // Handle the logout action
   const handleLogout = async () => {
-    const url = "http://localhost:4000/api/auth/sign-out";
+    const url = "/api/auth/sign-out";
     try {
       await axios.get(url, { withCredentials: true });
       // Clear user data from the Redux store
